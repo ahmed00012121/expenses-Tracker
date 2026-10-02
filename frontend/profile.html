@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | Expense Tracker</title>
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/profile.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main class="profile-page-container">
+    <div class="profile-avatar-container">
+      <img id="avatarPreview" src="assets/images/avatar.png" alt="Profile Avatar">
+      <label class="avatar-upload-label">
+        Change Avatar
+        <input type="file" id="avatarUpload" accept="image/*" hidden>
+      </label>
+    </div>
+    <div class="profile-info-container">
+      <h1>My Profile</h1>
+      <form id="profileForm" class="profile-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required disabled>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Change password (optional)">
+        </div>
+        <button type="submit" class="btn">Update Profile</button>
+      </form>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/profile.js"></script>
+</body>
+</html>

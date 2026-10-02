@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Expense Tracker</title>
+  <link rel="stylesheet" href="assets/css/common.css" />
+  <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar" class="sidebar"></div>
+  <main class="dashboard-container">
+    <h1>Welcome, <span id="userName"></span> 👋</h1>
+    <section class="summary-table">
+      <h2>Overall Summary</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Total Income</th>
+            <th>Total Expense</th>
+            <th>Net Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="totalIncome">0.00</td>
+            <td id="totalExpense">0.00</td>
+            <td id="netBalance">0.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="accounts-table">
+      <h2>accounts </h2>
+      <table id="accountsTable">
+        <thead>
+          <tr>
+            <th>Account Name</th>
+            <th>Total Income</th>
+            <th>Total Expense</th>
+            <th>Balance</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="accountsTableBody">
+        </tbody>
+      </table>
+    </section>
+    <div class="add-expense-global" style="text-align:center; margin:2rem 0;">
+      <button id="addExpenseBtn" class="btn">+ Add Expense</button>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

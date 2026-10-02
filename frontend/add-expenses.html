@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Transaction | Expense Tracker</title>
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/add-expenses.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main class="expense-form-container">
+    <div class="expense-form-card">
+      <h1>Add New Transaction</h1>
+      <form id="expenseForm">
+        <label for="transactionType">Transaction Type</label>
+        <select id="transactionType" required>
+          <option value="expense">💸 Expense</option>
+          <option value="income">💰 Income / Borrow</option>
+        </select>
+        <label for="expenseName">Person / Account Name (Optional)</label>
+        <input type="text" id="expenseName" placeholder="Person/Account Name">
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="Title" required>
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" placeholder="Amount" required>
+        <label for="currency">Currency</label>
+        <select id="currency" required>
+           <option value="INR" selected>INR (₹)</option>
+          <option value="USD" >USD ($)</option>
+          <option value="EUR">EUR (€)</option>
+       
+
+        </select>
+        <label for="category">Category</label>
+        <select id="category" >
+           <option value="">Other</option> <!-- default -->
+          <option value="Food">🍔 Food</option>
+          <option value="Transport">🚌 Transport</option>
+          <option value="Shopping">🛒 Shopping</option>
+          <option value="Bills">💡 Bills</option>
+          <option value="Borrow">🤝 Borrow</option>
+          <option value="Salary">💼 Salary</option>
+          <option value="Gift">🎁 Gift</option>
+          <option value="Other">🔖 Other</option>
+        </select>
+        <label for="date">Date</label>
+        <input type="date" id="date" required>
+
+
+        <label for="notes">Notes (Optional)</label>
+        <textarea id="notes" placeholder="Optional Notes"></textarea>
+        <label class="gallery-upload-label">
+          Upload Images
+          <input type="file" id="transactionImages" accept="image/*" multiple hidden>
+        </label>
+        <div id="transactionGallery" class="profile-gallery"></div>
+        <button type="submit" class="btn">Save Transaction</button>
+      </form>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/add-expenses.js"></script>
+</body>
+</html>

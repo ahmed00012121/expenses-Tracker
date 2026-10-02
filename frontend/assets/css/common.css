@@ -1,0 +1,132 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  padding: 0.5rem 0.8rem;
+  background: #2b2d42;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 50px; 
+}
+
+
+.menu-btn {
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  left: 0.8rem;  
+  top: 20%;     
+  transform: translateY(-50%);
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+.sidebar {
+  position: fixed;
+  top: 50px; 
+  left: -220px;
+  height: calc(100% - 50px);
+  width: 220px;
+  background: #ffffff;
+  color: #333;
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: left 0.3s ease;
+  z-index: 900;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar a {
+  padding: 0.8rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar a:hover {
+  background: #f0f0f0;
+}
+
+.sidebar.show {
+  left: 0;
+}
+
+.main-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2b2d42;
+  color: #fff;
+  padding: 0.5rem 0.8rem;   
+  font-size: 0.85rem;       
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 -1px 6px rgba(0,0,0,0.04);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  height: 20px;            
+}
+
+.main-footer a {
+  color: rgba(255,255,255,0.92);
+  text-decoration: none;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  transition: background 0.18s, color 0.18s;
+  font-size: 0.85rem;
+}
+
+.main-footer a:hover {
+  background: rgba(255,255,255,0.08);
+  color: #fca311;
+}
+
+.main-footer .muted {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.8rem;
+}
+
+body {
+  margin: 0;
+  padding-top: 50px;  
+  padding-bottom: 45px; 
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1rem;
+  }
+  .menu-btn {
+    font-size: 1.1rem;
+  }
+
+  .main-footer {
+    flex-direction: column;
+    gap: 0.4rem;
+    height: auto;          
+    padding: 0.6rem;
+  }
+}

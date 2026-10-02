@@ -1,0 +1,65 @@
+# ==========================================
+# Environment variables and sensitive secrets
+# ==========================================
+# Prevent .env files containing passwords, API keys,
+# database URLs, JWT secrets, and other credentials
+# from being uploaded to GitHub.
+.env
+.env.*
+!.env.example
+
+
+# ==========================================
+# Node.js dependencies
+# ==========================================
+# node_modules contains installed packages and should
+# be installed again using npm install when needed.
+node_modules/
+**/node_modules/
+
+
+# ==========================================
+# Log files
+# ==========================================
+# Ignore application and npm log files.
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+
+# ==========================================
+# Build and generated files
+# ==========================================
+# These folders contain generated files rather than
+# the original project source code.
+dist/
+build/
+coverage/
+
+
+# ==========================================
+# Operating system files
+# ==========================================
+# Ignore unnecessary files created by Windows/macOS.
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# ==========================================
+# Code editor files
+# ==========================================
+# Ignore local editor settings and temporary files.
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+# ==========================================
+# Temporary files
+# ==========================================
+# Ignore temporary files created during development.
+*.tmp
+*.temp

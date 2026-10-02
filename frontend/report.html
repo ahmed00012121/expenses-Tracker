@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Report | Expense Tracker</title>
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/report.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main class="report-container">
+    <h1>Transaction Report</h1>
+    <section class="filters">
+      <select id="filterCategory">
+        <option value="">All Categories</option>
+        <option value="Food">🍔 Food</option>
+        <option value="Transport">🚌 Transport</option>
+        <option value="Shopping">🛒 Shopping</option>
+        <option value="Bills">💡 Bills</option>
+        <option value="Borrow">🤝 Borrow</option>
+        <option value="Salary">💼 Salary</option>
+        <option value="Gift">🎁 Gift</option>
+        <option value="Other">🔖 Other</option>
+      </select>
+      <input type="date" id="filterDate" />
+      <button id="applyFilters" class="btn">Apply</button>
+      <button id="clearFilters" class="btn-secondary">Clear</button>
+      <button id="resetReport" class="btn btn-danger">Reset Report</button>
+    </section>
+    <section class="summary">
+      <div>
+        <h2>Total Income</h2>
+        <p><span id="totalIncome">0.00</span></p>
+      </div>
+      <div>
+        <h2>Total Expense</h2>
+        <p><span id="totalExpense">0.00</span></p>
+      </div>
+      <div>
+        <h2>Net Balance</h2>
+        <p><span id="netBalance">0.00</span></p>
+      </div>
+      <div>
+        <h2>Number of Records</h2>
+        <p><span id="totalRecords">0</span></p>
+      </div>
+    </section>
+    <section class="chart-section">
+      <h2>Monthly Transactions Trend</h2>
+      <canvas id="monthlyChart"></canvas>
+    </section>
+    <section id="accountsContainer" class="accounts-container">
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/report.js"></script>
+</body>
+</html>

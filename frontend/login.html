@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Expense Tracker</title>
+  <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body>
+  <main class="auth-container">
+    <div class="auth-logo">
+      <img src="assets/images/logo.png" alt="Expense Tracker Logo">
+      <h2>Expense Tracker</h2>
+    </div>
+    <h1>Login</h1>
+    <form id="loginForm" class="auth-form">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit" class="btn">Login</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Create Account</a></p>
+    <p><a href="#" id="showResetBtn">Forgot Password?</a></p>
+    <div id="resetSection">
+      <h2>Reset Password</h2>
+      <form id="resetForm" class="auth-form">
+        <input type="email" id="resetEmail" placeholder="Enter your email" required>
+        <input type="password" id="newPassword" placeholder="Enter new password" required>
+        <button type="submit" class="btn">Reset Password</button>
+      </form>
+      <p id="resetMessage"></p>
+    </div>
+  </main>
+  <footer class="main-footer">
+    <p>© 2025 Expense Tracker</p>
+  </footer>
+  <script src="assets/js/auth.js" defer></script>
+</body>
+</html>
